@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    color: #256993;
+    font-family: 'Roboto Mono', monospace;
+}
+.sidebar {
+    background-color: #faf4ec;
+    flex: 1 1 auto;
+    width: 20%;
+
+}
+.sidebar h1 {
+    text-align: center;
+}
+.main-content{
+    width:80%;
+    flex: 1 1 auto;
+    background-color: #f3e9de;
+}
+.main-content h1 {
+    text-align: center;
+}
