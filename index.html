@@ -3,6 +3,7 @@
   <head>
     <title>Assignment1</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylesheet.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,50 +11,56 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
   </head>
   <body>
-
-    <nav class = "sidebar">
+    <nav class="sidebar">
       <h1>My Notes</h1>
       <ul>
         <li>note one</li>
         <li>note two</li>
       </ul>
     </nav>
-
-    <main class = "main-content">
-      <h1>Take Better Notes</h1>
-      <div class = "menu">
-        <p>About</p>
-        <p>Docs</p>
-      </div>
-
-      <button class="new-note" type="button">New Note</button>
-      <button class="dark-Theme" type="button">Dark Theme</button>
-      <div class="text-area">
-        <textarea id="note" name="note">
-            This is a placeholder
-        </textarea>
-        <button class="save-button" type="button">Save</button>
-        <button class="cancel-button" type="button">Cancel</button>
+    <div class="main-content">
+        <main class = "grid-area">
+          <h1>Take Better Notes</h1>
+          <div class="menu">
+            <p>About</p>
+            <p>Docs</p>
+          </div>
+          <div class="new-note-div">
+            <button class="new-note" type="button">New Note</button>
+          </div>
+          <div class="dark-flex">
+            <button class="dark-Theme" type="button">Dark Theme</button>
+          </div>
+          <textarea id="note" name="note">This is a placeholder</textarea>
+          <div class="save-cancel">
+            <button class="save-button" type="button">Save</button>
+            <button class="cancel-button" type="button">Cancel</button>
+          </div>
+        </main>
 
       <footer>
         <h3>Keep in Touch</h3>
-        <div class = "footer-img">
-        <img
-          src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_color-512.png"
-          alt="logo1" width="35x" height="35px"
-        />
-        <img
-          src="https://cdn0.iconfinder.com/data/icons/internet-line/512/Internet_Line-02-512.png"
-          alt="logo2" width="35px" height="35px"
-        />
+        <div class="footer-img">
+          <img
+            src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_color-512.png"
+            alt="logo1"
+          />
+          <img
+            src="https://cdn0.iconfinder.com/data/icons/internet-line/512/Internet_Line-02-512.png"
+            alt="logo2"
+          />
         </div>
-        </footer>
-
-    </main>
+      </footer>
   </body>
 </html>

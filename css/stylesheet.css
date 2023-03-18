@@ -1,7 +1,13 @@
+
 body{
     display: flex;
     color: #256993;
     font-family: 'Roboto Mono', monospace;
+    margin:0;
+}
+li{
+    list-style-type: square;
+    font-size: 1.3em;
 }
 .sidebar {
     background-color: #faf4ec;
@@ -12,48 +18,215 @@ body{
 .menu{
     display:flex;
     justify-content: flex-end;
-    gap: 2%;
-    margin-right: 1%;
+    gap: 10%;
+    grid-area: menu;
+    align-items: end;
+    margin: 0 7%;
+    font-size: 1.3em;
 }
-h1,h3 {
+h3 {
     text-align: center;
+    font-size: 1.7em;
 }
+h1{
+    grid-area: head;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0;
+    /* white-space: nowrap; */
+}
+p{
+    margin:0;
+}
+    
 button {
-    border-radius: 8px;
-    padding: 10px;
+    margin: 0 7%;
+    border-radius: 10px;
+    padding: 1em;
     font-family: 'Roboto', sans-serif;
     border-style: none;
     color:white;
+    font-size: 1em;
 }
 .new-note{
     background-color: #375f68;
+    white-space: nowrap;
+}
+.new-note-div{
+    grid-area: new-note;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 .dark-Theme{
     background-color: #56536a;
 }
+.dark-flex{
+    grid-area: dark-Theme;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
 .save-button{
     background-color: #375f68;
+    margin-right: 0;
+
 }
 .cancel-button{
     background-color: #9b332c;
 }
+.save-cancel{
+    grid-area: save-cancel;
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+
 .main-content{
-    width:80%;
+    width:100%;
     flex: 1 1 auto;
     background-color: #f3e9de;
     height: 100vh;
+    display:grid;
+    grid-template-areas:
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr 1fr;
 
 }
+.grid-area {
+    display:grid;
+    grid-template-areas:
+    "head head head"
+    ". . menu"
+    "new-note . dark-Theme"
+    "textarea textarea textarea"
+    ". . save-cancel";
+    grid-template-columns: 3fr 9fr 2fr;
+    grid-template-rows: 0.7fr 0.2fr 0.3fr 1.5fr 1fr;
+    grid-gap: 3%;
+
+}
+
 textarea{
+    margin: 0 1.3%;
     border: 3px solid #6495ed;
     background-color: #faf4ed;
+    grid-area: textarea;
+    font-size: 1.7em;
+    padding: 1%;
+    font-family: 'Cutive Mono', monospace;
+    border-radius: 8px;
 }
-
 .footer-img {
     display: flex;        
     justify-content: center;
     gap: 2%;
-    padding-bottom: 1%;
+}
+footer img{
+    width:4em;
+    height:4em;
+    margin-bottom: 0.5%;
+}
 
+footer{
+    width: 100%;
+    grid-area: footer;
 
 }
+
+@media screen and (min-width: 401px) and (max-width: 1300px) {
+
+    li{
+        font-size: 1.3em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    h1{
+        font-size: 2.5em;
+        margin-top: 5%;
+    }
+    .sidebar h1{
+        margin-top: 10%;
+        font-size: 2.2em;
+    }
+    p{
+        font-size: 1.0em;
+    }
+    textarea{
+        font-size: 1.4em;
+    }
+
+    footer img{
+        width: 2.5em;
+        height:2.5em;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    body{
+        flex-direction: column;
+    }
+    .main-content h1 {
+        margin-top: 8%;
+    }
+    .sidebar {
+        width: 100%;
+        height: 20vh;
+    }
+    .new-note{
+        margin: 0 3%;
+    }
+    .main-content{
+        height: 80vh;
+    }
+    
+    .grid-area {
+        grid-template-areas:
+        "head head"
+        "new-note menu"
+        "textarea textarea"
+        "dark-Theme save-cancel";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.2fr 0.5fr 3.0fr 1.2fr;
+    }
+    .dark-flex{
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .dark-Theme{
+        margin-left: 3%;
+    }
+    .save-cancel{
+        justify-content: flex-end;
+        margin-left: 3%;
+    }
+    
+    li{
+        font-size: 1em;
+    }
+    h3 {
+        font-size: 1.0em;
+    }
+    h1{
+        font-size: 2.0em;
+    }
+    p{
+        font-size: 0.8em;
+    }
+    textarea{
+        font-size: 1.0em;
+    }
+    button {
+        padding: 0.9em;
+        font-size: 0.9em;
+    }
+    footer img{
+        width: 2em;
+        height:2em;
+    }
+    }
