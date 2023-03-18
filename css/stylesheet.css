@@ -35,6 +35,7 @@ h1{
     margin-bottom: 0;
     /* white-space: nowrap; */
 }
+
 p{
     margin:0;
 }
@@ -94,6 +95,7 @@ button {
     "footer";
     grid-template-columns: 1fr;
     grid-template-rows: 5fr 1fr;
+    color: #1C4E6D
 
 }
 .grid-area {
