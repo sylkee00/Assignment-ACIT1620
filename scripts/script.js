@@ -35,3 +35,26 @@ newnoteButton.addEventListener('click', function() {
     noteTextarea.value = '';
 });
 
+const notesArray = [
+    {title: "note one", body: "this is my first note"},
+    {title: "note two", body: "this is my second note"}
+  ];
+const sidebarList = document.querySelector(".sidebar ul");
+  
+saveButton.addEventListener("click", function() {
+    const title = prompt("Please enter a title for your note");
+    if (title) {
+        const newNote = {title: title, body: noteTextarea.value};
+    
+        notesArray.push(newNote);
+    
+        const newListItem = document.createElement("li");
+        newListItem.textContent = title;
+    
+        sidebarList.appendChild(newListItem);
+    
+        noteTextarea.value = "";
+    }
+});
+
+  
