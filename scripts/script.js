@@ -16,3 +16,14 @@ darkThemeButton.addEventListener('click', function() {
 });
 
 
+const cancelButton = document.querySelector('.cancel-button');
+const noteTextarea = document.querySelector('#note');
+const saveButton = document.querySelector('.save-button');
+
+cancelButton.addEventListener('click', function() {
+    noteTextarea.classList.add('hidden');
+    saveButton.classList.add('hidden');
+    cancelButton.classList.add('hidden');
+});
+
+

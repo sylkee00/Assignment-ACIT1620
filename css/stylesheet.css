@@ -167,6 +167,13 @@ footer{
     color: #256993;
   }
 
+  
+
+.hidden {
+    display: none;
+}
+
+
 @media screen and (min-width: 416px) and (max-width: 1300px) {
 
     li{
