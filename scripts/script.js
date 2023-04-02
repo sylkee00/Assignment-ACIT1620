@@ -26,4 +26,12 @@ cancelButton.addEventListener('click', function() {
     cancelButton.classList.add('hidden');
 });
 
+const newnoteButton = document.querySelector('.new-note');
+
+newnoteButton.addEventListener('click', function() {
+    noteTextarea.classList.remove('hidden');
+    saveButton.classList.remove('hidden');
+    cancelButton.classList.remove('hidden');
+    noteTextarea.value = '';
+});
 
