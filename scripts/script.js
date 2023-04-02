@@ -57,4 +57,14 @@ saveButton.addEventListener("click", function() {
     }
 });
 
+sidebarList.addEventListener("click", function(event) {
+  if(event.target.tagName === "LI") {
+    const clickedTitle = event.target.textContent;
+    const clickednote = notesArray.find(function(note) {
+        return note.title === clickedTitle;
+    });
+    noteTextarea.value = clickednote.body;
+  }
+});
+
   
