@@ -150,6 +150,30 @@ footer{
 
 }
 
+.dark {
+    color: #e0e0e0;
+  }
+  
+  .sidebar.dark {
+    background-color: #333333;
+  }
+  
+  .main-content.dark {
+    background-color: #262626;
+  }
+  
+.light-Theme-button {
+    background-color: #faf4ec;
+    color: #256993;
+  }
+
+  
+
+.hidden {
+    display: none;
+}
+
+
 @media screen and (min-width: 416px) and (max-width: 1300px) {
 
     li{
